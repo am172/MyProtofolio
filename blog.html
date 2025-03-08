@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogApp - Blogging Platform</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>BlogApp - A Simple Blogging Platform</h1>
+        <div class="project-images">
+            <img src="../assets/blog/Capture.PNG" alt="BlogApp Dashboard Screenshot">
+            <img src="../assets/blog/Capture1.PNG" alt="Create Blog Screenshot">
+        </div>
+        <div class="project-images">
+            <img src="../assets/blog/Capture2.PNG" alt="Create Blog Screenshot">
+            <img src="../assets/blog/Capture3.PNG" alt="Create Blog Screenshot">
+        </div>
+        <div class="project-images">
+            <img src="../assets/blog/Capture4.PNG" alt="Create Blog Screenshot">
+            <img src="../assets/blog/Capture5.PNG" alt="Create Blog Screenshot">
+        </div>
+        
+        <p class="description">
+            <strong>Description:</strong><br>
+            BlogApp is a full-stack blogging platform built using the **MERN Stack** (MongoDB, Express.js, React.js, Node.js). Users can create an account, log in securely, and write blog posts with images.<br><br>
+        
+            <strong>Technologies Used:</strong><br>
+            - <strong>React.js:</strong> Dynamic and interactive UI.<br>
+            - <strong>Tailwind CSS:</strong> Modern styling with responsive design.<br>
+            - <strong>Node.js & Express.js:</strong> Backend API for user authentication and blog management.<br>
+            - <strong>MongoDB:</strong> NoSQL database for storing users and blog posts.<br>
+            - <strong>JWT Authentication:</strong> Secure login system.<br>
+            - <strong>RESTful API:</strong> Efficient communication between frontend and backend.<br>
+            - <strong>Git & GitHub:</strong> Version control and project management.<br><br>
+        </p>
+        
+        <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https:/\/github.com/am172/the-blog'">
+              Github
+            </button>
+            <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='/pages/blog.html'">
+              Display
+            </button> -->
+          </div>
+
+    </div>
+    
+    <script>
+        document.querySelectorAll('.project-images img').forEach(img => {
+            img.addEventListener('click', function () {
+                let fullscreenDiv = document.createElement('div');
+                fullscreenDiv.classList.add('fullscreen-img');
+
+                let fullImg = document.createElement('img');
+                fullImg.src = this.src;
+
+                let closeBtn = document.createElement('span');
+                closeBtn.classList.add('close-btn');
+                closeBtn.innerHTML = "&times;";
+                closeBtn.onclick = () => document.body.removeChild(fullscreenDiv);
+
+                fullscreenDiv.appendChild(fullImg);
+                fullscreenDiv.appendChild(closeBtn);
+                document.body.appendChild(fullscreenDiv);
+            });
+        });
+    </script>
+</body>
+</html>

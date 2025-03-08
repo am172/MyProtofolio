@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> dal</title>
+    <link rel="stylesheet" href="app.css">
+    
+        
+</head>
+<body>
+
+    <div class="container">
+        <h1> Dal - Programming Learning Platform</h1>
+        <div class="project-images">
+            <img src="../assets/Screenshot_28-8-2024_203058_am172.github.io.jpeg" alt="صورة أخرى للمشروع">
+            <img src="../assets/dal5.PNG" alt="صورة للمشروع">
+        </div>
+        <div class="project-images">
+            <img src="../assets/dal2.PNG" alt="صورة أخرى للمشروع">
+            <img src="../assets/Capture.PNG" alt="صورة للمشروع">
+        </div>
+        <div class="project-images">
+            <img src="../assets/dal3.PNG" alt="صورة أخرى للمشروع">
+            <img src="../assets/dal4.PNG" alt="صورة للمشروع">
+        </div>
+       
+        <p class="description">
+            
+            <strong>Description:</strong><br>
+            Dal is a frontend-based web platform designed to help beginners learn programming fundamentals in a structured and interactive way. The website provides essential programming resources, learning roadmaps, and practical exercises to guide users through their journey. It focuses on making programming more accessible through a simple and engaging UI.<br><br>
+            
+            <strong>Technologies Used:</strong><br>
+            - <strong>HTML, CSS, JavaScript:</strong> Core structure and interactivity<br>
+            - <strong>Bootstrap:</strong> For responsive design and UI components<br>
+            - <strong>Git & GitHub:</strong> For version control and deployment<br><br>
+          
+            Dal is one of my notable projects, reflecting my passion for web development and making programming education accessible to beginners. 🚀
+        </p>
+
+        <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https:/\/github.com/am172/dalforprogramming.git'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https:/\/tinyurl.com/ycyww84h'">
+              Live Demo
+            </button>
+        </div>
+
+    </div>
+    <script>
+        document.querySelectorAll('.project-images img').forEach(img => {
+    img.addEventListener('click', function () {
+        let fullscreenDiv = document.createElement('div');
+        fullscreenDiv.classList.add('fullscreen-img');
+
+        let fullImg = document.createElement('img');
+        fullImg.src = this.src;
+
+        let closeBtn = document.createElement('span');
+        closeBtn.classList.add('close-btn');
+        closeBtn.innerHTML = "&times;";
+        closeBtn.onclick = () => document.body.removeChild(fullscreenDiv);
+
+        fullscreenDiv.appendChild(fullImg);
+        fullscreenDiv.appendChild(closeBtn);
+        document.body.appendChild(fullscreenDiv);
+    });
+});
+
+    </script>
+</body>
+</html>

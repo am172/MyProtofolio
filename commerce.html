@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Frontend</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>E-commerce Frontend Project</h1>
+        <div class="project-images">
+            <img src="../assets/com.PNG" alt="elsoraelola">
+            <img src="../assets/com2e.PNG" alt="Homepage Screenshot">
+        </div>
+        <div class="project-images">
+            <img src="../assets/commm3.PNG" alt="Homepage Screenshot">
+            <img src="../assets/comm3.PNG" alt="Homepage Screenshot">
+        </div>
+        <div class="project-images">
+            <img src="../assets/comm4e.PNG" alt="Homepage Screenshot">
+            <img src="../assets/comme4.PNG" alt="Homepage Screenshot">
+        </div>
+        
+        <p class="description">
+            <strong>Description:</strong><br>
+            This project is a frontend for an e-commerce website, built using modern web technologies. It features an attractive design, smooth user experience, and full responsiveness across all devices.<br><br>
+            
+            <strong>Technologies Used:</strong><br>
+            - <strong>HTML, CSS, JavaScript:</strong> Core structure and interactivity<br>
+            - <strong>React.js:</strong> For component-based UI and improved performance<br>
+            - <strong>Tailwind CSS:</strong> For fast styling and responsive design<br>
+            - <strong>API Integration:</strong> To dynamically fetch products and offers<br>
+            - <strong>Git & GitHub:</strong> For version control and deployment<br><br>
+
+            This project aims to deliver a seamless online shopping experience, making e-commerce more efficient and user-friendly. 🛒🚀
+        </p>
+
+        <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https:/\/github.com/am172/ecommerce.git'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https:/\/am172.github.io/ecommerce/'">
+              Live Demo
+            </button>
+          </div>
+
+    </div>
+    
+    <script>
+        document.querySelectorAll('.project-images img').forEach(img => {
+            img.addEventListener('click', function () {
+                let fullscreenDiv = document.createElement('div');
+                fullscreenDiv.classList.add('fullscreen-img');
+
+                let fullImg = document.createElement('img');
+                fullImg.src = this.src;
+
+                let closeBtn = document.createElement('span');
+                closeBtn.classList.add('close-btn');
+                closeBtn.innerHTML = "&times;";
+                closeBtn.onclick = () => document.body.removeChild(fullscreenDiv);
+
+                fullscreenDiv.appendChild(fullImg);
+                fullscreenDiv.appendChild(closeBtn);
+                document.body.appendChild(fullscreenDiv);
+            });
+        });
+    </script>
+</body>
+</html>

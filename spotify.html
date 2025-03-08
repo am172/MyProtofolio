@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhikr - Quran Listening App</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Zekr - Quran Listening Web App</h1>
+        <div class="project-images">
+            <img src="../assets/dekr1.PNG" alt="Dhikr App Screenshot">
+            <img src="../assets/dekr2.PNG" alt="Another Dhikr App Screenshot">
+        </div>
+        <div class="project-images">
+            <img src="../assets/dekr3.PNG" alt="Dhikr App Screenshot">
+            <img src="../assets/dekr4.PNG" alt="Another Dhikr App Screenshot">
+        </div>
+        <div class="project-images">
+            <img src="../assets/dekr5.PNG" alt="Dhikr App Screenshot">
+            <img src="../assets/dekr6.PNG" alt="Another Dhikr App Screenshot">
+        </div>
+        <p class="description">
+            <strong>Description:</strong><br>
+            Zekr is a full-stack web application designed to provide a seamless Quran listening experience. Built using the MERN Stack (MongoDB, Express.js, React.js, Node.js) with Vite, the app allows users to listen to high-quality Quran recitations, save favorite reciters, and navigate through Surahs with ease.<br><br>
+            
+            <strong>Technologies Used:</strong><br>
+            - <strong>React.js & Vite:</strong> For a smooth and fast frontend experience.<br>
+            - <strong>Tailwind CSS:</strong> For responsive and modern UI design.<br>
+            - <strong>Node.js & Express.js:</strong> Backend API for Quran audio streaming and user management.<br>
+            - <strong>MongoDB:</strong> For saving user preferences and history.<br>
+            - <strong>JWT Authentication:</strong> Secure user login and favorites tracking.<br>
+            - <strong>Quran API:</strong> Integrated to fetch high-quality audio and Quran text.<br>
+            - <strong>Git & GitHub:</strong> For version control and deployment.<br><br>
+            
+            Zekr is created to offer a peaceful and immersive Quran listening experience, accessible anytime, anywhere. 🎧🕌
+        </p>
+
+        <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https:/\/github.com/am172/zekr/tree/main'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https:/\/tinyurl.com/4ew7b5pv'">
+            Live Demo
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.project-images img').forEach(img => {
+            img.addEventListener('click', function () {
+                let fullscreenDiv = document.createElement('div');
+                fullscreenDiv.classList.add('fullscreen-img');
+
+                let fullImg = document.createElement('img');
+                fullImg.src = this.src;
+
+                let closeBtn = document.createElement('span');
+                closeBtn.classList.add('close-btn');
+                closeBtn.innerHTML = "&times;";
+                closeBtn.onclick = () => document.body.removeChild(fullscreenDiv);
+
+                fullscreenDiv.appendChild(fullImg);
+                fullscreenDiv.appendChild(closeBtn);
+                document.body.appendChild(fullscreenDiv);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskApp - Productivity Tool</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>TaskApp - Productivity Tool</h1>
+        <div class="project-images">
+            <img src="../assets/task.PNG" alt="TaskApp Dashboard Screenshot">
+             <img src="../assets/task1.PNG" alt="TaskApp Dashboard Screenshot">
+
+        </div>
+        <div class="project-images">
+            <img src="../assets/task4.PNG" alt="TaskApp Dashboard Screenshot">
+
+        </div>
+        
+        <p class="description">
+            <strong>Description:</strong><br>
+            This project is a full-stack e-commerce application, built using the **MERN Stack** (MongoDB, Express.js, React.js, Node.js). It provides a seamless online shopping experience with secure authentication, dynamic product management, and an intuitive UI.<br><br>
+        
+            <strong>Technologies Used:</strong><br>
+            - <strong>React.js:</strong> Component-based UI for a smooth and interactive experience.<br>
+            - <strong>Tailwind CSS:</strong> Fast and responsive styling for a modern design.<br>
+            - <strong>Node.js & Express.js:</strong> Backend API for handling product data, authentication, and orders.<br>
+            - <strong>MongoDB:</strong> NoSQL database for efficient product and user data storage.<br>
+            - <strong>JWT Authentication:</strong> Secure login and user management.<br>
+            - <strong>Cloudinary:</strong> For efficient image storage and management.<br>
+            - <strong>RESTful API:</strong> For seamless communication between frontend and backend.<br>
+            - <strong>Git & GitHub:</strong> Version control and deployment.<br><br>
+        
+        </p>
+        
+
+        <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https:/\/github.com/am172/task'">
+            Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https:/\/vimeo.com/1027999285?share=copy'">
+            Display
+            </button>
+        </div>
+
+    </div>
+    
+    <script>
+        document.querySelectorAll('.project-images img').forEach(img => {
+            img.addEventListener('click', function () {
+                let fullscreenDiv = document.createElement('div');
+                fullscreenDiv.classList.add('fullscreen-img');
+
+                let fullImg = document.createElement('img');
+                fullImg.src = this.src;
+
+                let closeBtn = document.createElement('span');
+                closeBtn.classList.add('close-btn');
+                closeBtn.innerHTML = "&times;";
+                closeBtn.onclick = () => document.body.removeChild(fullscreenDiv);
+
+                fullscreenDiv.appendChild(fullImg);
+                fullscreenDiv.appendChild(closeBtn);
+                document.body.appendChild(fullscreenDiv);
+            });
+        });
+    </script>
+</body>
+</html>
