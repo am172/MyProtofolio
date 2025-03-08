@@ -111,4 +111,7 @@
   .text-container {
     text-align: justify;
   }
+  p{
+    font-size: 10px;
+  }
 }
